@@ -11,7 +11,7 @@ namespace Assets.Scripts.Audio
         #region Constants
 
         private const FftSize CFftSize = FftSize.Fft4096;
-        public const int MaxAudioValue = 10;
+        public const float MaxAudioValue = 10;
 
         #endregion
 

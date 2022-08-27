@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.Audio;
 
 public class LoopBackVisualize : MonoBehaviour
 {
+    [SerializeField]
+    private AudioVisualizationStrategy strat;
     [SerializeField]
     private GameObject prefab;
     [SerializeField]
@@ -24,9 +27,11 @@ public class LoopBackVisualize : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float[] data = analyser.GetAllSpectrumData(strat);
+        //float data = analyser.GetSpectrumData(strat);
         for (int i = 0; i < cubes.Count; i++)
         {
-            cubes[i].transform.localScale = new Vector3(1, analyser.SpectrumData[i], 1); 
+            cubes[i].transform.localScale = new Vector3(1, data[i], 1); 
         }
     }
 }

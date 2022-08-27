@@ -14,6 +14,8 @@ public class LoopbackAudio : MonoBehaviour
 
     #region Private Member Variables
 
+    [SerializeField]
+    private AudioSource _audioSource;
     private RealtimeAudio _realtimeAudio;
     private List<float> _postScaleAverages = new List<float>();
 
@@ -48,7 +50,7 @@ public class LoopbackAudio : MonoBehaviour
 
         // Used for post scaling
         float postScaleStep = 1.0f / SpectrumSize;
-
+        
         // Setup loopback audio and start listening
         _realtimeAudio = new RealtimeAudio(SpectrumSize, ScalingStrategy, (spectrumData) =>
         {
@@ -193,6 +195,8 @@ public class LoopbackAudio : MonoBehaviour
 
         return spectrumData;
     }
+
+    //public float[] get
 
     #endregion
 }

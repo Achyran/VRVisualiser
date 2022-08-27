@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts.Audio;
 
-[RequireComponent(typeof(AudioSource))]
+
 public class Analyser : MonoBehaviour
 {
     public static Analyser current;
+    [SerializeField]
     private AudioSource audioSource;
-
+    [SerializeField]
+    private LoopbackAudio loopback;
 
     public float[] samplesLeft { get; private set; }
     public float[] samplesRight { get; private set; }
@@ -51,10 +54,11 @@ public class Analyser : MonoBehaviour
             Debug.LogWarning("AudioPeer exists");
             Destroy(this);
         }
-        audioSource = GetComponent<AudioSource>();
         InitArrays();
 
         AudioProfile(audioProfile);
+
+        if (loopback != null) loopback.SpectrumSize = 512;
        
     }
 
@@ -125,9 +129,16 @@ public class Analyser : MonoBehaviour
 
     private void GetSpectrumAudioSource()
     {
-        audioSource.GetSpectrumData(samplesLeft,0,FFTWindow.Blackman);
-        audioSource.GetSpectrumData(samplesRight, 1, FFTWindow.Blackman);
-
+        if (audioSource != null)
+        {
+            audioSource.GetSpectrumData(samplesLeft, 0, FFTWindow.Blackman);
+            audioSource.GetSpectrumData(samplesRight, 1, FFTWindow.Blackman);
+        }
+        else
+        {
+            samplesLeft = loopback.GetAllSpectrumData(AudioVisualizationStrategy.Raw);
+            samplesRight = loopback.GetAllSpectrumData(AudioVisualizationStrategy.Raw);
+        }
 
     }
     
