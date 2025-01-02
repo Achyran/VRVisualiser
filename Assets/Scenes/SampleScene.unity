@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 2
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &294927142
@@ -5332,7 +5332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 6
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &642847293
@@ -5447,7 +5447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 5
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &808394155
@@ -5611,7 +5611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 0
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &884048380
@@ -5726,7 +5726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 3
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &1073362476
@@ -5838,7 +5838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 127112490526144089, guid: 80984a7cb59a39e458763b73625ee221, type: 3}
   radius: 17.2
-  yScale: 100
+  yScale: 20
 --- !u!4 &1292090090
 Transform:
   m_ObjectHideFlags: 0
@@ -5888,7 +5888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 4
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &1337216727
@@ -6003,7 +6003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 1
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &1495187180
@@ -6118,7 +6118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   band: 7
   startScale: 1
-  scaleMultiplier: 10
+  scaleMultiplier: 1
   useBuffer: 1
   baseBrightness: 0
 --- !u!65 &1941991384
@@ -6373,6 +6373,16 @@ PrefabInstance:
         type: 3}
       propertyPath: audioSource
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037937005092516854, guid: f7f3da52a2d4f634099a50171345aa3d,
+        type: 3}
+      propertyPath: decresspeed
+      value: 1.126
+      objectReference: {fileID: 0}
+    - target: {fileID: 8037937005092516855, guid: f7f3da52a2d4f634099a50171345aa3d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7f3da52a2d4f634099a50171345aa3d, type: 3}
