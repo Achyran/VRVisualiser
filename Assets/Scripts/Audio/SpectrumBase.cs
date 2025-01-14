@@ -168,6 +168,7 @@ namespace Assets.Scripts.Audio
             {
                 switch (ScalingStrategy)
                 {
+                    //Add log 
                     case ScalingStrategy.Decibel:
                         value0 = (((20 * Math.Log10(fftBuffer[i])) - MinDbValue) / DbScale) * actualMaxValue;
                         break;
