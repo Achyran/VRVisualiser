@@ -14,8 +14,6 @@ public class LoopbackAudio : MonoBehaviour
 
     #region Private Member Variables
 
-    [SerializeField]
-    private AudioSource _audioSource;
     private RealtimeAudio _realtimeAudio;
     private List<float> _postScaleAverages = new List<float>();
 
@@ -23,6 +21,7 @@ public class LoopbackAudio : MonoBehaviour
 
     #region Public Properties
 
+    public static LoopbackAudio current;
     public int SpectrumSize;
     public ScalingStrategy ScalingStrategy;
     public float[] SpectrumData;
@@ -44,6 +43,15 @@ public class LoopbackAudio : MonoBehaviour
 
     public void Awake()
     {
+
+        if (current == null) current = this;
+        else
+        {
+            Destroy(this);
+            return;
+        }
+
+
         SpectrumData = new float[SpectrumSize];
         PostScaledSpectrumData = new float[SpectrumSize];
         PostScaledMinMaxSpectrumData = new float[SpectrumSize];
