@@ -136,8 +136,8 @@ public class Analyser : MonoBehaviour
         }
         else
         {
-            samplesLeft = loopback.GetAllSpectrumData(AudioVisualizationStrategy.Raw);
-            samplesRight = loopback.GetAllSpectrumData(AudioVisualizationStrategy.Raw);
+            samplesLeft = loopback.GetAllSpectrumData(AudioVisualizationStrategy.PostScaledMinMax);
+            samplesRight = loopback.GetAllSpectrumData(AudioVisualizationStrategy.PostScaledMinMax);
         }
 
     }
