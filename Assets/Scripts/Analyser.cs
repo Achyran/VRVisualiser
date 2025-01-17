@@ -55,7 +55,7 @@ public class Analyser : MonoBehaviour
             Destroy(this);
         }
 
-        if (LoopbackAudio.current != null) audioSource = null;
+       // if (LoopbackAudio.current != null) audioSource = null;
         InitArrays();
 
         AudioProfile(audioProfile);
