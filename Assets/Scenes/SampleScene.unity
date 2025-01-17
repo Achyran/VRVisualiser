@@ -149,12 +149,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpectrumSize: 512
-  ScalingStrategy: 2
+  ScalingStrategy: 1
   SpectrumData: []
   PostScaledSpectrumData: []
   PostScaledMinMaxSpectrumData: []
-  PostScaledMax: 0
-  PostScaledEnergy: 0
+  PostScaledMax: 1
+  PostScaledEnergy: 1
   IsIdle: 0
   ThresholdToMin: 0.8
   MinAmount: 0.5
@@ -6481,10 +6481,15 @@ PrefabInstance:
       propertyPath: decresspeed
       value: 1.368
       objectReference: {fileID: 0}
+    - target: {fileID: 8037937005092516854, guid: f7f3da52a2d4f634099a50171345aa3d,
+        type: 3}
+      propertyPath: audioProfile
+      value: 0.43
+      objectReference: {fileID: 0}
     - target: {fileID: 8037937005092516855, guid: f7f3da52a2d4f634099a50171345aa3d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
