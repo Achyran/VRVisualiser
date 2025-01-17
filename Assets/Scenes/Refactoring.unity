@@ -163,8 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d6e96ba14b7eb48a36ec46725d077e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioSource: {fileID: 0}
-  SpectrumSize: 512
+  SpectrumSize: 1
   ScalingStrategy: 0
   SpectrumData: []
   PostScaledSpectrumData: []
