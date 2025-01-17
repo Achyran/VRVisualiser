@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &178645640
+--- !u!1 &46101181
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,8 +127,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 178645642}
-  - component: {fileID: 178645641}
+  - component: {fileID: 46101183}
+  - component: {fileID: 46101182}
   m_Layer: 0
   m_Name: Loopback
   m_TagString: Untagged
@@ -136,40 +136,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &178645641
+--- !u!114 &46101182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178645640}
+  m_GameObject: {fileID: 46101181}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d6e96ba14b7eb48a36ec46725d077e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpectrumSize: 512
-  ScalingStrategy: 1
+  ScalingStrategy: 2
   SpectrumData: []
   PostScaledSpectrumData: []
   PostScaledMinMaxSpectrumData: []
   PostScaledMax: 0
   PostScaledEnergy: 0
   IsIdle: 0
-  ThresholdToMin: 0
-  MinAmount: 0
-  ThresholdToMax: 0
-  MaxAmount: 10
---- !u!4 &178645642
+  ThresholdToMin: 0.8
+  MinAmount: 0.5
+  ThresholdToMax: 1.2
+  MaxAmount: 1.5
+--- !u!4 &46101183
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178645640}
+  m_GameObject: {fileID: 46101181}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.955215, y: 17.572107, z: 44.972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6470,7 +6470,7 @@ PrefabInstance:
         type: 3}
       propertyPath: loopback
       value: 
-      objectReference: {fileID: 178645641}
+      objectReference: {fileID: 0}
     - target: {fileID: 8037937005092516854, guid: f7f3da52a2d4f634099a50171345aa3d,
         type: 3}
       propertyPath: audioSource
@@ -6479,7 +6479,7 @@ PrefabInstance:
     - target: {fileID: 8037937005092516854, guid: f7f3da52a2d4f634099a50171345aa3d,
         type: 3}
       propertyPath: decresspeed
-      value: 1.126
+      value: 1.368
       objectReference: {fileID: 0}
     - target: {fileID: 8037937005092516855, guid: f7f3da52a2d4f634099a50171345aa3d,
         type: 3}
@@ -6509,5 +6509,5 @@ SceneRoots:
   - {fileID: 1941991387}
   - {fileID: 1999508943}
   - {fileID: 408696189}
-  - {fileID: 178645642}
   - {fileID: 828216975}
+  - {fileID: 46101183}
