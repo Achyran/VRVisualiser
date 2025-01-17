@@ -143,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46101181}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d6e96ba14b7eb48a36ec46725d077e, type: 3}
   m_Name: 
@@ -5967,7 +5967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 127112490526144089, guid: 80984a7cb59a39e458763b73625ee221, type: 3}
   radius: 17.2
-  yScale: 20
+  yScale: 1
 --- !u!4 &1292090090
 Transform:
   m_ObjectHideFlags: 0
