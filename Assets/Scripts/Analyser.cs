@@ -54,6 +54,8 @@ public class Analyser : MonoBehaviour
             Debug.LogWarning("AudioPeer exists");
             Destroy(this);
         }
+
+        if (LoopbackAudio.current != null) audioSource = null;
         InitArrays();
 
         AudioProfile(audioProfile);
@@ -136,8 +138,8 @@ public class Analyser : MonoBehaviour
         }
         else
         {
-            samplesLeft = loopback.GetAllSpectrumData(AudioVisualizationStrategy.PostScaled);
-            samplesRight = loopback.GetAllSpectrumData(AudioVisualizationStrategy.PostScaled);
+            samplesLeft = LoopbackAudio.current.GetAllSpectrumData(AudioVisualizationStrategy.PostScaled);
+            samplesRight = LoopbackAudio.current.GetAllSpectrumData(AudioVisualizationStrategy.PostScaled);
         }
 
     }
