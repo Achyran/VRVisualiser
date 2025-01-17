@@ -22,7 +22,7 @@ public class LoopbackAudio : MonoBehaviour
     #region Public Properties
 
     public static LoopbackAudio current;
-    public int SpectrumSize;
+    public int SpectrumSize = 512;
     public ScalingStrategy ScalingStrategy;
     public float[] SpectrumData;
     public float[] PostScaledSpectrumData;
@@ -32,10 +32,10 @@ public class LoopbackAudio : MonoBehaviour
     public bool IsIdle;
 
     // Set through editor, but good values are 0.8, 0.5, 1.2, 1.5 respectively
-    public float ThresholdToMin;
-    public float MinAmount;
-    public float ThresholdToMax;
-    public float MaxAmount;
+    public float ThresholdToMin = 0.8f;
+    public float MinAmount = 0.5f;
+    public float ThresholdToMax = 1.2f;
+    public float MaxAmount = 1.5f;
 
     #endregion
 
