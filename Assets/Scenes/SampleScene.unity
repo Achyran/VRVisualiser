@@ -143,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46101181}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28d6e96ba14b7eb48a36ec46725d077e, type: 3}
   m_Name: 
@@ -175,6 +175,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &263408671 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8037937005092516855, guid: f7f3da52a2d4f634099a50171345aa3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8037937006440053190}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &294927140
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,7 +6481,7 @@ PrefabInstance:
         type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 263408671}
     - target: {fileID: 8037937005092516854, guid: f7f3da52a2d4f634099a50171345aa3d,
         type: 3}
       propertyPath: decresspeed
