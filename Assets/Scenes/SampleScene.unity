@@ -5967,7 +5967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 127112490526144089, guid: 80984a7cb59a39e458763b73625ee221, type: 3}
   radius: 17.2
-  yScale: 1
+  yScale: 5
 --- !u!4 &1292090090
 Transform:
   m_ObjectHideFlags: 0
