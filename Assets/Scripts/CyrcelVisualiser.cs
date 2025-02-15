@@ -11,14 +11,14 @@ public class CyrcelVisualiser : MonoBehaviour
     [Range(0,100)]
     private float radius;
     [SerializeField]
-    private float yScale;
+    private float scale;
 
     enum Direction
     {
         X,Y,Z
     }
     [SerializeField]
-    Direction direction;
+    Direction direction = Direction.X;
     void Start()
     {
         if(Analyser.current == null)
@@ -44,7 +44,21 @@ public class CyrcelVisualiser : MonoBehaviour
         {
             if (samplecubes != null)
             {
-                samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, Analyser.current.samplesLeft[i] * yScale + 2, samplecubes[i].transform.localScale.z);
+                switch (direction)
+                {
+                    case Direction.X:
+                        samplecubes[i].transform.localScale = new Vector3(Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.y, samplecubes[i].transform.localScale.z);
+                        break;
+                    case Direction.Y:
+                        samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.localScale.z);
+                        break;
+                    case Direction.Z:
+                        samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, samplecubes[i].transform.y, Analyser.current.samplesLeft[i] * scale);
+                        break;
+                    default:
+                        break;
+                }
+
             }
         }
     }
