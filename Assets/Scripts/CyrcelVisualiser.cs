@@ -47,13 +47,13 @@ public class CyrcelVisualiser : MonoBehaviour
                 switch (direction)
                 {
                     case Direction.X:
-                        samplecubes[i].transform.localScale = new Vector3(Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.y, samplecubes[i].transform.localScale.z);
+                        samplecubes[i].transform.localScale = new Vector3(Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.localScale.y, samplecubes[i].transform.localScale.z);
                         break;
                     case Direction.Y:
                         samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.localScale.z);
                         break;
                     case Direction.Z:
-                        samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, samplecubes[i].transform.y, Analyser.current.samplesLeft[i] * scale);
+                        samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, samplecubes[i].transform.localScale.y, Analyser.current.samplesLeft[i] * scale);
                         break;
                     default:
                         break;
