@@ -13,6 +13,12 @@ public class CyrcelVisualiser : MonoBehaviour
     [SerializeField]
     private float yScale;
 
+    enum Direction
+    {
+        X,Y,Z
+    }
+    [SerializeField]
+    Direction direction;
     void Start()
     {
         if(Analyser.current == null)
