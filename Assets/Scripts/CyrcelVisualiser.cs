@@ -19,6 +19,8 @@ public class CyrcelVisualiser : MonoBehaviour
     }
     [SerializeField]
     Direction direction = Direction.X;
+    [SerializeField]
+    private float cubeScale =1 ;
     void Start()
     {
         if(Analyser.current == null)
@@ -47,13 +49,13 @@ public class CyrcelVisualiser : MonoBehaviour
                 switch (direction)
                 {
                     case Direction.X:
-                        samplecubes[i].transform.localScale = new Vector3(Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.localScale.y, samplecubes[i].transform.localScale.z);
+                        samplecubes[i].transform.localScale = new Vector3(Analyser.current.samplesLeft[i] * scale, cubeScale, cubeScale);
                         break;
                     case Direction.Y:
-                        samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, Analyser.current.samplesLeft[i] * scale, samplecubes[i].transform.localScale.z);
+                        samplecubes[i].transform.localScale = new Vector3(cubeScale, Analyser.current.samplesLeft[i] * scale, cubeScale);
                         break;
                     case Direction.Z:
-                        samplecubes[i].transform.localScale = new Vector3(samplecubes[i].transform.localScale.x, samplecubes[i].transform.localScale.y, Analyser.current.samplesLeft[i] * scale);
+                        samplecubes[i].transform.localScale = new Vector3(cubeScale,cubeScale, Analyser.current.samplesLeft[i] * scale);
                         break;
                     default:
                         break;
