@@ -5965,10 +5965,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52f5680156e97845bb3b9e3e6fbfdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 127112490526144089, guid: 80984a7cb59a39e458763b73625ee221, type: 3}
-  radius: 33.4
-  scale: 0
-  direction: 0
+  prefab: {fileID: 2467693497811356529, guid: ba6e2f60f380de9489ee47117d142a6b, type: 3}
+  radius: 4
+  scale: 10
+  direction: 2
+  cubeScale: 0.5
 --- !u!4 &1292090090
 Transform:
   m_ObjectHideFlags: 0
