@@ -34,6 +34,7 @@ public class CyrcelVisualiser : MonoBehaviour
             g.name = $"Visualise cube {i}";
             this.transform.eulerAngles = new Vector3(0, -0.703125f * i, 0);
             g.transform.position = Vector3.forward * radius;
+            g.transform.eulerAngles = new Vector3(0, 10, 0);
             samplecubes[i] = g;
         }
 
