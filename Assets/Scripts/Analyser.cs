@@ -9,8 +9,6 @@ public class Analyser : MonoBehaviour
     public static Analyser current;
     [SerializeField]
     private AudioSource audioSource;
-    [SerializeField]
-    private LoopbackAudio loopback;
 
     public float[] samplesLeft { get; private set; }
     public float[] samplesRight { get; private set; }
@@ -59,20 +57,18 @@ public class Analyser : MonoBehaviour
         InitArrays();
 
         AudioProfile(audioProfile);
-
-        if (loopback != null) loopback.SpectrumSize = 512;
        
     }
 
     private void Update()
     {
         GetSpectrumAudioSource();
-        MakeFrequencyBands();
-        BandBuffer();
-        CreatAudioBands();
-        GetAmplitude();
-        UpdateApmDiffernce();
-        UpdateBandDifference();
+        //MakeFrequencyBands();
+        //BandBuffer();
+        //CreatAudioBands();
+        //GetAmplitude();
+        //UpdateApmDiffernce();
+        //UpdateBandDifference();
     }
     private void UpdateApmDiffernce()
     {
@@ -87,7 +83,6 @@ public class Analyser : MonoBehaviour
             bandDifference[i] = audioBandBuffer[i] - lastBand[i];
             lastBand[i] = audioBandBuffer[i];
         }
-        
     }
 
 
@@ -138,8 +133,8 @@ public class Analyser : MonoBehaviour
         }
         else
         {
-            samplesLeft = LoopbackAudio.current.GetAllSpectrumData(AudioVisualizationStrategy.PostScaledMinMax);
-            samplesRight = LoopbackAudio.current.GetAllSpectrumData(AudioVisualizationStrategy.PostScaledMinMax);
+            samplesLeft = LoopbackAudio.current.GetAllSpectrumData(AudioVisualizationStrategy.Raw);
+            samplesRight = LoopbackAudio.current.GetAllSpectrumData(AudioVisualizationStrategy.Raw);
         }
 
     }
